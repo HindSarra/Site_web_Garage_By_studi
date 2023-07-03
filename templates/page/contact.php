@@ -1,4 +1,3 @@
-<?php require_once('templates/header.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,4 +13,3 @@
 
 </html>
 
-<?php require_once('templates/footer.php'); ?>
