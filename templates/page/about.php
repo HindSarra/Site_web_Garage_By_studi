@@ -1,3 +1,4 @@
+<?php require_once('templates/header.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,5 +11,7 @@
 <body>
 
 </body>
+
+<?php require_once('templates/footer.php'); ?>
 
 </html>
