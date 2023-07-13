@@ -1,3 +1,9 @@
+<?php
+require_once('src/config.php');
+$currentPage = basename($_SERVER['SCRIPT_NAME']);
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,13 +25,16 @@
         <img src="assets/image/logo_horizontal" alt="Logo garage-auto" width="250">
       </a>
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#index.php" class="nav-link px-2 link-secondary">Acceuil</a></li>
-        <li><a href="#voitures.php" class="nav-link px-2 link-dark">Nos voitures</a></li>
-        <li><a href="#ajoutModif.php" class="nav-link px-2 link-dark">Ajout voitures</a></li>
-        <li><a href="#contact.php" class="nav-link px-2 link-dark">Contact</a></li>
-        <li><a href="#about.php" class="nav-link px-2 link-dark">A propos</a></li>
+
+        <?php foreach ($mainMenu as $key => $value) { ?>
+          <li class="nav-item">
+            <a href="<?= $key; ?>" class="nav-link <?php if ($currentPage === $key) {
+                                                      echo 'active';
+                                                    } ?>"><?= $value; ?></a>
+          </li>
+        <?php } ?>
       </ul>
-      <div class="col-md-3 text-end">
+      <div class="col-md-2 text-end">
         <button type="button" class="btn btn-primary">Se connecter</button>
       </div>
     </header>
