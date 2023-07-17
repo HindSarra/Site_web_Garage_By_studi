@@ -24,7 +24,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
       <a href="index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <img src="assets/image/logo_horizontal" alt="Logo garage-auto" width="250">
       </a>
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
 
         <?php foreach ($mainMenu as $key => $value) { ?>
           <li class="nav-item">

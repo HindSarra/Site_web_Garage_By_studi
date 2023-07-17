@@ -1,9 +1,7 @@
 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
   <div class="col mb-3">
-    <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-      <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap"></use>
-      </svg>
+    <a href="index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="assets/image/logo_horizontal" alt="Logo garage-auto" width="250">
     </a>
     <p class="text-body-secondary">© 2023</p>
   </div>

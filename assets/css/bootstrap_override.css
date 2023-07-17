@@ -1,6 +1,6 @@
 :root {
-  --primary: #d94350;
-  --secondary: #d97880;
+  --primary: #262526;
+  --secondary: #d92332;
   --success: #39741d;
   --danger: #dc3545;
   --warning: #ce5164;
@@ -17,7 +17,7 @@
   --bs-btn-bg: var(--primary);
   --bs-btn-border-color: var(--secondary);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #e4aaae;
+   --bs-btn-hover-bg: #d94350;
   --bs-btn-hover-border-color: var(--secondary);
   --bs-btn-focus-shadow-rgb: 49,132,253;
   --bs-btn-active-color: #fff;
@@ -27,8 +27,7 @@
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #4f4f4f;
   --bs-btn-disabled-border-color: #343434;
-}
-
+} 
 .btn-outline-primary {
   --bs-btn-color: var(--primary);
   --bs-btn-border-color: var(--primary);
@@ -47,16 +46,17 @@
 }
 
 .nav-pills {
-  --bs-nav-pills-border-radius: 0.375rem;
+  --bs-nav-pills-border-radius: 0.25rem;
   --bs-nav-pills-link-active-color: #fff;
   --bs-nav-pills-link-active-bg: var(--primary);
 }
+
 
 h1 {
 color: var(--primary);
 }
 
-h2, h3 {
+h2, h3,h5 {
   color: var(--secondary);
 }
 
