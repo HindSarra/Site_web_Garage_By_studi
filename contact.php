@@ -26,12 +26,16 @@
     </div>
 
     <div class="col-md-12 my-2">
-      <label for="inputState" class="form-label">Voitures</label>
+      <label for="" class="form-label">categories
+      </label>
       <select id="inputcar" class="form-select">
         <option selected="selected">Selectionner un model </option>
         <option>Berline</option>
+        <option>Break</option>
         <option>Coupé</option>
         <option>Citadine</option>
+        <option>SUV</option>
+
 
       </select>
     </div>
