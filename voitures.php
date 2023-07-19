@@ -2,6 +2,7 @@
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
   <h1>Liste des voitures en vente</h1>
 </div>
+<?php include('lib/filtre.php'); ?>
 <div class="row">
   <div class="col-md-4">
     <div class="card">

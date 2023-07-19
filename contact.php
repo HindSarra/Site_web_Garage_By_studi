@@ -39,6 +39,18 @@
 
       </select>
     </div>
+    <div class="col-md-12 my-2">>
+      <select id="inputcar" class="form-select">
+        <option selected="selected">Type de carburant </option>
+        <option>Berline</option>
+        <option>Break</option>
+        <option>Coupé</option>
+        <option>Citadine</option>
+        <option>SUV</option>
+
+</div>
+      
+      </select>
     <div class="mb-3">
       <label for="message" class="form-label">Message</label>
       <textarea name="message" id="message" cols="30" rows="5" class="form-control"></textarea>
