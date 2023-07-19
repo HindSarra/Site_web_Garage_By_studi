@@ -23,7 +23,7 @@
     <label for="prix" class="form-label">Prix</label>
     <input name="prix" id="prix" class="form-control"></input>
   </div>
-  <div class="mb-">
+  <div class="mb-3">
     <label for="kilometrage" class="form-label">Kilométrage</label>
     <input name="kilometrage" id="kilometrage" class="form-control"></input>
   </div>
