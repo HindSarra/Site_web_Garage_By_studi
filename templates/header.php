@@ -1,4 +1,5 @@
 <?php
+require_once('bdd/config.php');
 require_once('src/config.php');
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
 ?>

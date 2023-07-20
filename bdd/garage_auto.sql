@@ -61,7 +61,7 @@ VALUES (
         3600.00,
         2012,
         25000,
-        NULL
+        '1-opel.jpg'
     ), (
         2,
         'Bentley',
@@ -69,7 +69,7 @@ VALUES (
         95000.00,
         2008,
         24454,
-        NULL
+        '2.jpg'
     ), (
         3,
         'BMW',
@@ -77,7 +77,7 @@ VALUES (
         25000.00,
         2010,
         21550,
-        NULL
+        '3-bmw.jpg'
     ), (
         4,
         'Mercedes',
@@ -85,7 +85,7 @@ VALUES (
         38600.00,
         2011,
         20100,
-        NULL
+        '4-mercedes .jpg'
     ), (
         5,
         'Jeep',
@@ -93,7 +93,7 @@ VALUES (
         19000.00,
         2009,
         34450,
-        NULL
+        '5-jeep.jpg'
     ), (
         6,
         'BMW',
@@ -101,7 +101,7 @@ VALUES (
         15000.00,
         2012,
         11400,
-        NULL
+        '6-bmw-bleu.jpg'
     ), (
         7,
         'Fiat',
@@ -109,7 +109,7 @@ VALUES (
         9000.00,
         2020,
         41543,
-        NULL
+        '7-fiat_rose.jpg'
     ), (
         8,
         'Fiat',
@@ -117,7 +117,7 @@ VALUES (
         15000.00,
         2020,
         15904,
-        NULL
+        '8-fiat_gris.jpg'
     ), (
         9,
         'Toyota',
@@ -125,7 +125,7 @@ VALUES (
         25000.00,
         2020,
         15904,
-        NULL
+        '9-toyota.jpg'
     ), (
         10,
         'BMW',
@@ -133,7 +133,7 @@ VALUES (
         14000.00,
         2013,
         150904,
-        NULL
+        '10-bmw-red.jpg'
     ), (
         11,
         'Audi',
@@ -141,7 +141,7 @@ VALUES (
         22000.00,
         2012,
         20904,
-        NULL
+        '11-audi.jpg'
     ), (
         12,
         'Mitsubishi',
@@ -149,7 +149,7 @@ VALUES (
         10000.00,
         2020,
         90904,
-        NULL
+        '12-mitsu.jpg'
     ), (
         13,
         'Hyundai',
@@ -157,7 +157,7 @@ VALUES (
         8000.00,
         2007,
         150904,
-        NULL
+        '13-hu.jpg'
     ), (
         14,
         'Opel',
@@ -165,7 +165,7 @@ VALUES (
         18000.00,
         2017,
         15904,
-        NULL
+        '14-opel-suv.jpg'
     );
 
 -- Crée la table open_day
