@@ -36,6 +36,7 @@ DROP TABLE IF EXISTS `car`;
 CREATE TABLE
     `car` (
         id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        `title` VARCHAR(255),
         `brand` VARCHAR(45),
         `modele` VARCHAR(45),
         `price` DECIMAL(10, 2),
@@ -47,6 +48,7 @@ CREATE TABLE
 INSERT INTO
     `car` (
         `id`,
+        `title`,
         `brand`,
         `modele`,
         `price`,
@@ -56,7 +58,7 @@ INSERT INTO
     )
 VALUES (
         1,
-        'Opel',
+        'Opel Corsa ' 'Opel',
         'Citadine',
         3600.00,
         2012,
@@ -64,6 +66,7 @@ VALUES (
         '1-opel.jpg'
     ), (
         2,
+        'Bentley G70',
         'Bentley',
         'Berline',
         95000.00,
@@ -72,6 +75,7 @@ VALUES (
         '2.jpg'
     ), (
         3,
+        'BMW serie 1',
         'BMW',
         'Citadine',
         25000.00,
@@ -80,14 +84,15 @@ VALUES (
         '3-bmw.jpg'
     ), (
         4,
-        'Mercedes',
+        'Mercedes class c',
         'Berline',
         38600.00,
         2011,
         20100,
-        '4-mercedes .jpg'
+        '4-mercedes.jpg'
     ), (
         5,
+        'Jeep Grand Cherokee',
         'Jeep',
         'SUV',
         19000.00,
@@ -96,7 +101,8 @@ VALUES (
         '5-jeep.jpg'
     ), (
         6,
-        'BMW',
+        'BMW m3 bleu',
+        'BWM',
         'Coupé',
         15000.00,
         2012,
@@ -104,6 +110,7 @@ VALUES (
         '6-bmw-bleu.jpg'
     ), (
         7,
+        'Fiat 500 rose',
         'Fiat',
         'Citadine',
         9000.00,
@@ -112,6 +119,7 @@ VALUES (
         '7-fiat_rose.jpg'
     ), (
         8,
+        'Fiat 500 grise',
         'Fiat',
         'Citadine',
         15000.00,
@@ -120,6 +128,7 @@ VALUES (
         '8-fiat_gris.jpg'
     ), (
         9,
+        'Toyota rav 4',
         'Toyota',
         'SUV',
         25000.00,
@@ -128,14 +137,16 @@ VALUES (
         '9-toyota.jpg'
     ), (
         10,
+        'BMW m3 rouge',
         'BMW',
         'Coupé',
-        14000.00,
+        65000.00,
         2013,
         150904,
         '10-bmw-red.jpg'
     ), (
         11,
+        'Audi a3',
         'Audi',
         'Coupé',
         22000.00,
@@ -144,6 +155,7 @@ VALUES (
         '11-audi.jpg'
     ), (
         12,
+        'Mitsubishi pajero',
         'Mitsubishi',
         'SUV',
         10000.00,
@@ -152,6 +164,7 @@ VALUES (
         '12-mitsu.jpg'
     ), (
         13,
+        'Hyundai Kona',
         'Hyundai',
         'SUV',
         8000.00,
@@ -160,6 +173,7 @@ VALUES (
         '13-hu.jpg'
     ), (
         14,
+        'Opel Mokka',
         'Opel',
         'SUV',
         18000.00,
