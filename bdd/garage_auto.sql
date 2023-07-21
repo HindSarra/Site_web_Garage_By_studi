@@ -34,7 +34,7 @@ VALUES (1, 'Admin'), (2, 'Employer'), (3, 'Guest');
 DROP TABLE IF EXISTS `car`;
 
 CREATE TABLE
-    `car` (
+    IF NOT EXISTS `car` (
         id INT(11) AUTO_INCREMENT PRIMARY KEY,
         `title` VARCHAR(255),
         `brand` VARCHAR(45),
@@ -58,7 +58,8 @@ INSERT INTO
     )
 VALUES (
         1,
-        'Opel Corsa ' 'Opel',
+        'Opel Corsa',
+        'Opel',
         'Citadine',
         3600.00,
         2012,
@@ -85,6 +86,7 @@ VALUES (
     ), (
         4,
         'Mercedes class c',
+        'Mercedes',
         'Berline',
         38600.00,
         2011,
@@ -187,7 +189,7 @@ VALUES (
 DROP TABLE IF EXISTS `open_day`;
 
 CREATE TABLE
-    `open_day` (
+    IF NOT EXISTS `open_day` (
         `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `day` VARCHAR(70),
         `hour_open` TIME,
@@ -240,7 +242,7 @@ VALUES (
 DROP table IF EXISTS `comment`;
 
 CREATE table
-    `comment` (
+    IF NOT EXISTS `comment` (
         `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
         `rate` INT(11),
         `name` VARCHAR(255),
@@ -266,7 +268,7 @@ VALUES (
 DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE
-    `user` (
+    IF NOT EXISTS `user` (
         `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `role_id` INT(11),
         `email` varchar(255) NOT NULL,
