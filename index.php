@@ -47,5 +47,5 @@
   </div>
   
   <?php
-  require_once('lib/articles.php');
+  require_once('includes/articles.php');
   require_once('templates/footer.php'); ?>

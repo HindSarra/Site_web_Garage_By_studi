@@ -31,7 +31,7 @@
       <li class=" text-body-secondary">✅Mer 11h-20h</li>
       <li class=" text-body-secondary">✅Jeu 11h-20h</li>
       <li class=" text-body-secondary">✅Ven 11h-20h</li>
-      <li class=" text-body-secondary">❌Sam 11h-14h</li>
+      <li class=" text-body-secondary">✅Sam 11h-14h</li>
       <li class=" text-body-secondary">❌Dim fermé </li>
 
 
