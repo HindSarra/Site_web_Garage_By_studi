@@ -33,6 +33,7 @@
     <option selected="selected">Selectionner un model </option>
         <option>Berline</option>
         <option>Break</option>
+        <option>Coupé</option>
         <option>Citadine</option>
         <option>SUV</option>
 
