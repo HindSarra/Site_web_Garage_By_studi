@@ -1,6 +1,6 @@
 -- Crée la base de données garage_auto
 
-CREATE DATABASE garage_auto;
+CREATE DATABASE IF NOT EXISTS garageauto_db;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
