@@ -1,7 +1,7 @@
 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 my-5 border-top">
   <div class="col mb-3">
     <a href="index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <img src="assets/image/logo_horizontal" alt="Logo garage-auto" width="200">
+      <img src="assets/image/logo_horizontal.png" alt="Logo garage-auto" width="200">
     </a>
     <p class="text-body-secondary">© 2023</p>
   </div>
