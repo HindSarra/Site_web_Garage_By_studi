@@ -297,7 +297,7 @@ VALUES (
         'Vincent'
     ), (
         2,
-        1,
+        2,
         'Jean.parrot@test.com',
         'd7fT9FczQHSHeuBxBNXb',
         'Parrot',

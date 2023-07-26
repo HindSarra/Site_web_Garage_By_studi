@@ -25,14 +25,26 @@
 
   <div class="col mb-3">
     <h5>Les horaires d'ouvertures</h5>
+
+    <?php  include ('includes/function/function_get_opening_day');
+
+    $open_days=getOpeningDay($pdo) ;
+    ?>
+
     <ul class=" nav flex-column">
-      <li class=" text-body-secondary">✅Lun 11h-20h</li>
-      <li class=" text-body-secondary">✅Mar 11h-20h</li>
-      <li class=" text-body-secondary">✅Mer 11h-20h</li>
-      <li class=" text-body-secondary">✅Jeu 11h-20h</li>
-      <li class=" text-body-secondary">✅Ven 11h-20h</li>
-      <li class=" text-body-secondary">✅Sam 11h-14h</li>
-      <li class=" text-body-secondary">❌Dim fermé </li>
+      <?php foreach ($open_days as $key => $open_day){ ?>
+
+      <li class=" text-body-secondary">✅<?= $open_days['day'].' '.$open_days['hour_open'].'-'.$open_days['hour_close']?></li>
+      
+      
+      <?php }?>
+<!--       
+      //  <li class=" text-body-secondary">✅Mar 11h-20h</li>
+      // <li class=" text-body-secondary">✅Mer 11h-20h</li>
+      // <li class=" text-body-secondary">✅Jeu 11h-20h</li>
+      // <li class=" text-body-secondary">✅Ven 11h-20h</li>
+      // <li class=" text-body-secondary">✅Sam 11h-14h</li>
+      // <li class=" text-body-secondary">❌Dim fermé </li> -->
 
 
     </ul>
