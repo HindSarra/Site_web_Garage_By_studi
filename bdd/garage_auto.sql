@@ -2,12 +2,6 @@
 
 CREATE DATABASE IF NOT EXISTS garageauto_db;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-
-START TRANSACTION;
-
-SET time_zone = "+00:00";
-
 -- Crée la table role
 
 DROP TABLE IF EXISTS `role`;
@@ -239,9 +233,9 @@ VALUES (
 
 -- cree table commentaire
 
-DROP table IF EXISTS `comment`;
+DROP TABLE IF EXISTS `comment`;
 
-CREATE table
+CREATE TABLE
     IF NOT EXISTS `comment` (
         `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
         `rate` INT(11),
@@ -275,8 +269,7 @@ CREATE TABLE
         `password` varchar(255) NOT NULL,
         `first_name` varchar(255) NOT NULL,
         `last_name` varchar(255) NOT NULL,
-        KEY `role_id` (`role_id`),
-        CONSTRAINT `fk_user_role` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
+        KEY `role_id` (`role_id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 INSERT INTO
@@ -303,3 +296,4 @@ VALUES (
         'Parrot',
         'Jean'
     );
+ALTER TABLE   `user` add CONSTRAINT `fk_user_role` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);

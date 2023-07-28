@@ -22,24 +22,31 @@
     </ul>
 
   </div>
-
+  <?php
+  include('includes/function/function_get_opening_day.php');
+  $open_days = getOpeningDay($pdo);
+  ?>
   <div class="col mb-3">
     <h5>Les horaires d'ouvertures</h5>
 
-    <?php  include ('includes/function/function_get_opening_day');
+    <?php
 
-    $open_days=getOpeningDay($pdo) ;
-    ?>
+    foreach ($open_days as $key => $open_day) { ?>
 
-    <ul class=" nav flex-column">
-      <?php foreach ($open_days as $key => $open_day){ ?>
+      <ul class=" nav flex-column">
+        <?php if ($open_day['hour_open'] === null && $open_day['hour_close'] === null) {
 
-      <li class=" text-body-secondary">✅<?= $open_days['day'].' '.$open_days['hour_open'].'-'.$open_days['hour_close']?></li>
-      
-      
-      <?php }?>
-<!--       
-      //  <li class=" text-body-secondary">✅Mar 11h-20h</li>
+          echo '<li class=" text-body-secondary">❌' . $open_day['day'] . " fermé </li>";
+        } else { ?>
+          <li class=" text-body-secondary">✅<?= $open_day['day'] . ' ' . $open_day['hour_open'] . '-' . $open_day['hour_close'] ?></li>
+
+      <?php }
+      }
+      ?>
+
+
+      <!--       
+          //  <li class=" text-body-secondary">✅Mar 11h-20h</li>
       // <li class=" text-body-secondary">✅Mer 11h-20h</li>
       // <li class=" text-body-secondary">✅Jeu 11h-20h</li>
       // <li class=" text-body-secondary">✅Ven 11h-20h</li>
@@ -47,7 +54,7 @@
       // <li class=" text-body-secondary">❌Dim fermé </li> -->
 
 
-    </ul>
+      </ul>
   </div>
 
   <div class="col mb-3">
