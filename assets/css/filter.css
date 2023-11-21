@@ -1,27 +1,45 @@
-:root {
-  --primary: #262526;
-  --secondary: #d92332;
-  --success: #39741d;
-  --danger: #dc3545;
-  --warning: #ce5164;
-  --info: #17a2b8;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --bs-nav-link-color: var(--primary);
-  --bs-link-color: var(--primary);
-  --bs-link-hover-color: var(--secondary);
-}
- .contenair{
-  margin-bottom: 50px;
-  padding: 15px,10px,15px,10px; 
-  width: 800px;
+  .contenair{
+
+   padding: 15px,10px,15px,10px;  
+  min-width: 1100px;
   height: 200px;
-  background: #363131;
+  background: #8b8080; 
   border-radius: 5px;
-}
+} 
 form{
   padding: 10px;
 }
 .row{
   padding: 10px;
 }
+ /* Styles pour la barre latérale */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Styles pour le formulaire et les éléments de filtre */
+
+.sidebar label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Styles pour le bouton de filtrage */
+.sidebar button {
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+

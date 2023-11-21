@@ -1,9 +1,9 @@
 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 my-5 border-top">
   <div class="col mb-3">
     <a href="index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <img src="assets/image/logo_horizontal" alt="Logo garage-auto" width="200">
+      <img src="assets/image/logo_horizontal.png" alt="Logo garage-auto" width="200">
     </a>
-    <p class="text-body-secondary">© 2023</p>
+    <p class="text-body-secondary">© v.parrot_garage_auto2023</p>
   </div>
 
   <div class="col mb-3">
@@ -22,20 +22,33 @@
     </ul>
 
   </div>
-
+  <?php
+  include('includes/function/function_get_opening_day.php');
+  $open_days = getOpeningDay($pdo);
+  ?>
   <div class="col mb-3">
     <h5>Les horaires d'ouvertures</h5>
-    <ul class=" nav flex-column">
-      <li class=" text-body-secondary">✅Lun 11h-20h</li>
-      <li class=" text-body-secondary">✅Mar 11h-20h</li>
-      <li class=" text-body-secondary">✅Mer 11h-20h</li>
-      <li class=" text-body-secondary">✅Jeu 11h-20h</li>
-      <li class=" text-body-secondary">✅Ven 11h-20h</li>
-      <li class=" text-body-secondary">✅Sam 11h-14h</li>
-      <li class=" text-body-secondary">❌Dim fermé </li>
+
+    <?php
+
+    foreach ($open_days as $key => $open_day) { ?>
+
+      <ul class=" nav flex-column">
+        <?php if ($open_day['hour_open'] === null && $open_day['hour_close'] === null) {
+
+          echo '<li class=" text-body-secondary">❌' . $open_day['day'] . " fermé </li>";
+        } else { ?>
+          <li class=" text-body-secondary">✅<?= $open_day['day'] . ' ' . $open_day['hour_open'] . '-' . $open_day['hour_close'] ?></li>
+
+      <?php }
+      }
+      ?>
 
 
-    </ul>
+      
+
+
+      </ul>
   </div>
 
   <div class="col mb-3">

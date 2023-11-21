@@ -1,16 +1,8 @@
 -- Crée la base de données garage_auto
 
-CREATE DATABASE garage_auto;
+CREATE DATABASE IF NOT EXISTS garageauto_db;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-
-START TRANSACTION;
-
-SET time_zone = "+00:00";
-
--- Crée la table role
-
-DROP TABLE IF EXISTS `role`;
+-- Crée la table role-
 
 CREATE TABLE
     IF NOT EXISTS `role` (
@@ -19,17 +11,24 @@ CREATE TABLE
         PRIMARY KEY (`id`)
     ) ENGINE = InnoDB AUTO_INCREMENT = 4 DEFAULT CHARSET = utf8mb3;
 
---
-
 -- Déchargement des données de la table `role`
-
---
 
 INSERT INTO
     `role` (`id`, `name`)
-VALUES (1, 'Admin'), (2, 'Employer'), (3, 'Guest');
+VALUES (1, 'Admin'), (2, 'Employer');
 
--- Crée la table car
+--cree la table contact
+
+CREATE TABLE
+    if NOT exists `contact`(
+        id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        `name` VARCHAR(255),
+        `lastName` VARCHAR(255),
+        `email` VARCHAR(255),
+        `number` VARCHAR(20),
+        `message` TEXT,
+        created_at TIMESTAMP
+    ) -- Crée la table car
 
 DROP TABLE IF EXISTS `car`;
 
@@ -104,7 +103,7 @@ VALUES (
     ), (
         6,
         'BMW m3 bleu',
-        'BWM',
+        'BMW',
         'Coupé',
         15000.00,
         2012,
@@ -182,7 +181,139 @@ VALUES (
         2017,
         15904,
         '14-opel-suv.jpg'
-    );
+    )
+    (
+        15,
+        'Bugacci chiroon blanche',
+        'Bugacci',
+        'Coupé',
+        180000.00,
+        2022,
+        15904,
+        '15-bugacci.jpg'
+    ),
+      (
+        16,
+        'Mustang gt rouge',
+        'Mustang',
+        'Coupé',
+        18000.00,
+        2020,
+        15904,
+        '16-mustong.jpg'
+    ),
+    (
+        17,
+        'Ferrari F8 tributo',
+        'Ferrari',
+        'Coupé',
+        20000.00,
+        2020,
+        15904,
+        '17-ferrari.jpg'
+    ),
+     (
+        18,
+        'Mini jhon grise',
+        'Mini',
+        'Citadine',
+        2000.00,
+        2019,
+        159041,
+        '18-mini-cooper.jpg'
+    ),
+    (
+        19,
+        'Lamborghini Huracan',
+        'Lamborghini',
+        'Coupé',
+        200000.00,
+        2017,
+        159041,
+        '19-lamborghini.jpg'
+    ),
+      (
+        20,
+        'Porche 911 rouge',
+        'Porche',
+        'Coupé',
+        30000.00,
+        1989,
+        1590041,
+        '20-porche-rouge.jpg' ),
+        (
+        21,
+        'Mercedes jaune',
+        'Mercedes',
+        'Coupé',
+        10000.00,
+        2018,
+        179041,
+        '21-merccedes.jpg' ),
+         (
+        22,
+        'Ferrari la ferrari',
+        'Ferrari',
+        'Coupé',
+        110000.00,
+        2016,
+        120941,
+        '22-ferrari.jpg' ),
+         (
+        23,
+        'Porche 911 grise',
+        'Porche',
+        'Coupé',
+        90000.00,
+        2017,
+        140941,
+        '23-porche-911.jpg' ),
+        (
+        24,
+        'Skoda noire',
+        'Skoda',
+        'Break',
+        9000.00,
+        2017,
+        140941,
+        '24-skoda.jpg' ),
+         (
+        25,
+        'Clio 4 jaune',
+        'Renault',
+        'Citadine',
+        4000.00,
+        2015,
+        140941,
+        '25-clio-4.jpg' ),
+          (
+        26,
+        'Hyundei rouge',
+        'Hyundei',
+        'Break',
+        5000.00,
+        2010,
+        140941,
+        '26-hyundai.jpg' ),
+           (
+        27,
+        'McLaren 720S',
+        'McLaren',
+        'Coupé',
+        150000.00,
+        2022,
+        140941,
+        '27-mclaren.jpg' ),
+         (
+        28,
+        'Mercedes noire' ,
+        'Mercedes',
+        'Coupé',
+        15000.00,
+        2020,
+        140941,
+        '28-mercedess.jpg' )
+    ;
 
 -- Crée la table open_day
 
@@ -205,43 +336,36 @@ INSERT INTO
         `hour_open`,
         `hour_close`
     )
+VALUES (1, 'Lun', '11:00', '20:00'), (2, 'Mar', '11:00', '20:00'), (3, 'Mer', '11:00', '20:00'), (4, 'Jeu', '11:00', '20:00'), (5, 'Ven', '11:00', '20:00'), (6, 'Sam', '11:00', '14:00'), (7, 'Dim', NULL, NULL);
+
+-- table services
+
+CREATE TABLE
+    IF NOT EXISTS `services` (
+        id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        `title` VARCHAR(255),
+        `description` TEXT
+    );
+
+INSERT INTO
+    `services` (`id`, `title`, `description`)
 VALUES (
         1,
-        'Lun',
-        '11:00:00',
-        '20:00:00'
+        'Réparation mécanique',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, reprehenderit! Optio, nam? Maxime, molestiae velit. Quae, totam accusantium natus doloribus labore ratione. Molestiae ab dicta explicabo assumenda totam velit. Enim.'
     ), (
         2,
-        'Mar',
-        '11:00:00',
-        '20:00:00'
+        'Diagnostic électronique',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, reprehenderit! Optio, nam? Maxime, molestiae velit. Quae, totam accusantium natus doloribus labore ratione. Molestiae ab dicta explicabo assumenda totam velit. Enim.'
     ), (
         3,
-        'Mer',
-        '11:00:00',
-        '20:00:00'
-    ), (
-        4,
-        'Jeu',
-        '11:00:00',
-        '20:00:00'
-    ), (
-        5,
-        'Ven',
-        '11:00:00',
-        '20:00:00'
-    ), (
-        6,
-        'Sam',
-        '11:00:00',
-        '14:00:00'
-    ), (7, 'Dim', NULL, NULL);
+        'Vente de pièces de rechange',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, reprehenderit! Optio, nam? Maxime, molestiae velit. Quae, totam accusantium natus doloribus labore ratione. Molestiae ab dicta explicabo assumenda totam velit. Enim.'
+    ) -- cree table commentaire
 
--- cree table commentaire
+DROP TABLE IF EXISTS `comment`;
 
-DROP table IF EXISTS `comment`;
-
-CREATE table
+CREATE TABLE
     IF NOT EXISTS `comment` (
         `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
         `rate` INT(11),
@@ -275,8 +399,7 @@ CREATE TABLE
         `password` varchar(255) NOT NULL,
         `first_name` varchar(255) NOT NULL,
         `last_name` varchar(255) NOT NULL,
-        KEY `role_id` (`role_id`),
-        CONSTRAINT `fk_user_role` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
+        KEY `role_id` (`role_id`)
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 INSERT INTO
@@ -292,14 +415,18 @@ VALUES (
         1,
         1,
         'vincent.parrot@test.com',
-        'rxPz1VIy33XlBstaSXGU',
+        'ZVAzjdsP!z@Z',
         'Parrot',
         'Vincent'
     ), (
         2,
-        1,
+        2,
         'Jean.parrot@test.com',
         'd7fT9FczQHSHeuBxBNXb',
         'Parrot',
         'Jean'
     );
+
+ALTER TABLE `user`
+ADD
+    CONSTRAINT `fk_user_role` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);

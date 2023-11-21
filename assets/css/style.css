@@ -1,11 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,800;1,100;1,200;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,800;1,100;1,200;1,300;1,400;1,500&family=Rajdhani&display=swap');
+*{
+  box-sizing: border-box;
+
+}
+html,body{
+margin: 20px;
+padding: auto;
+
+}
 body{
+ 
   font-family: 'Barlow', sans-serif;
-  margin: auto;
+
+
 }
 
 h1,h2{
 font-weight: 600;
   font-family: 'Rajdhani', sans-serif;
 }
+
+
+/* Styles pour la section de contenu avec image en arrière-plan */
+#banner {
+  background-image: url('../image/image_bannier.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff; 
+  padding: 100px 0;
+  display: flex;
+  text-align: center;
+}
+
+.banner-container {
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+ text-align: center;
+}
+.banner-container  h1{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight:800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Exemple d'ombre */
+  font-size: 2.8em;
+
+}
+.banner-container  p{
+  font-weight:400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 1.5rem;
+ 
+}
+
+
+/* Style des étiquettes */
+
+#form-temoignage {
+  /* max-width: 400px; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* Style des étiquettes */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style du bouton */
+button[type="submit"] {
+
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
